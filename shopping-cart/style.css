@@ -1,0 +1,163 @@
+/**
+* ! changing the default styles of the browser
+**/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+i{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #ffff;
+}
+/**
+* ! Navbar Styles
+**/
+.navbar{
+    background-color: #212529;
+    color: #ffff;
+    padding: 25px 60px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart{
+    position: relative;
+    background-color: #ffff;
+    color: #212529;
+    /* display: flex; */
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 4px;
+}
+.cartAmount{
+    position: absolute;
+    font-size: 16px;
+    background-color: red;
+    color: #ffff;
+    top: -15px;
+    right: -10px;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+/**
+* ! Shop Item Styles 
+**/
+.shop{
+    display: grid;
+    grid-template-columns: repeat(4,223px);
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+/* media querry to make my cards responsive  */
+@media (max-width: 1000px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(2,223px);
+    }
+}
+@media (max-width: 500px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(1,223px);
+    }
+}
+.item{
+    border: 2px solid #212529;
+    border-radius: 4px;
+}
+.item img{
+    width: 100%;
+    border-radius: 2px 0 0;
+}
+.details{
+    display: flex;
+    flex-direction: column; 
+    padding: 10px;
+    gap: 10px;
+}
+.price-quantity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    gap: 8px;
+}
+.bi .bi-dash-lg{
+    color: red;
+    cursor: pointer;
+}
+.bi .bi-plus-lg{
+    color: green;
+    cursor: pointer;
+}
+/* Shoppong cart (label and button) */
+.emptyCart{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.btn, .checkout , .clearCart{
+    background-color: #212529;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.deleteCross{
+    font-weight: bold;
+    color: red;
+    
+}
+/* shopping cart  */
+
+.shopping-cart{
+    display: grid;
+    grid-template-columns: repeat(1,320px);
+   justify-content: center;
+   gap: 15px;
+   
+}
+.cart-item{
+    border: 2px solid #212529;
+    border-radius: 5px;
+    display: flex;
+}
+.title-price-x{
+    width: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.cart-item-price{
+    color: #ffff;
+    background-color: #212529;
+    border-radius: 4px;
+    padding: 3px 6px;
+}
+
+/* TOTALL BILL BUTTONS */
+.checkout{
+    background-color: green;
+}
+.clearCart{
+    background-color: red;
+}
